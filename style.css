@@ -1,0 +1,522 @@
+/* ====================
+   Professional Background Update 
+==================== */
+:root {
+    --primary-dark: #0f172a; 
+    --text-dark: #1e293b; 
+    --text-light: #475569; 
+    
+    /* নতুন প্রিমিয়াম ব্যাকগ্রাউন্ড (হালকা নীলচে ছাই রঙের গ্রেডিয়েন্ট) */
+    --bg-main: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%); 
+    
+    --bg-navbar: rgba(226, 232, 240, 0.85); /* ব্যাকগ্রাউন্ডের সাথে মিলিয়ে ন্যাভবার */
+    --font-main: 'Inter', sans-serif;
+    --smooth-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--bg-main); /* এখন ব্যাকগ্রাউন্ডে সুন্দর একটি গ্রেডিয়েন্ট থাকবে */
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden; 
+    min-height: 100vh; /* পুরো স্ক্রিন জুড়ে যেন ব্যাকগ্রাউন্ড থাকে */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ====================
+   Navbar Styling (আপডেটেড ব্যাকগ্রাউন্ড)
+==================== */
+.navbar {
+    background-color: var(--bg-navbar); 
+    padding: 24px 0; 
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(12px); /* ব্লার ইফেক্ট একটু বাড়ানো হলো যাতে ব্যাকগ্রাউন্ডের সাথে সুন্দর লাগে */
+    border-bottom: 1px solid rgba(0,0,0,0.05); 
+    z-index: 100;
+}
+
+/* ====================
+   Navbar Styling
+==================== 
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 24px 0; 
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(8px); 
+    border-bottom: 1px solid rgba(0,0,0,0.05); 
+    z-index: 100;
+}*/
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800; 
+    letter-spacing: -0.5px; 
+    text-decoration: none;
+    color: var(--primary-dark);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 15px;
+    transition: var(--smooth-transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-dark);
+}
+
+/* ====================
+   Button Styles
+==================== */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--primary-dark); 
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px; 
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+    transition: var(--smooth-transition);
+}
+
+.btn-primary:hover {
+    background: #374151; 
+    color: #ffffff;
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.15); 
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 28px;
+    background: transparent; 
+    color: var(--primary-dark);
+    text-decoration: none;
+    border: 1.5px solid var(--primary-dark);
+    border-radius: 8px; 
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--smooth-transition);
+}
+
+.btn-secondary:hover {
+    background: rgba(17, 24, 39, 0.05);
+    
+    transform: translateY(-2px);
+}
+
+/* ====================
+   Hero Section Styling
+==================== */
+.hero {
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.greeting {
+    color: var(--text-light);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--primary-dark);
+    line-height: 1.1;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* ====================
+   Hero Section Styling (আপডেট করা হয়েছে)
+==================== */
+.hero {
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* লেখা ও ছবিকে দুই পাশে সরিয়ে দেবে */
+    gap: 50px; /* লেখা ও ছবির মাঝে ফাঁকা জায়গা */
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+/* ছবির ডিজাইন */
+.hero-image {
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 350px; /* ছবির সাইজ */
+    height: 350px;
+    object-fit: cover; /* ছবি যেন চ্যাপ্টা না হয় */
+    border-radius: 50%; /* ছবিকে সুন্দর গোলাকার করবে */
+    border: 8px solid var(--bg-light); /* ছবির চারপাশে সাদা বর্ডার */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* চমৎকার একটি শ্যাডো */
+    transition: var(--smooth-transition);
+}
+
+.hero-image img:hover {
+    transform: translateY(-10px); /* মাউস নিলে ছবিটি হালকা ওপরে উঠবে */
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* ====================
+   Motion & Animations 
+==================== */
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInBottom {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInTop {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.slide-left {
+    animation: slideInLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.slide-right {
+    animation: slideInRight 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.slide-bottom {
+    animation: slideInBottom 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.slide-down {
+    animation: slideInTop 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+/* ====================
+   About Section Styling
+==================== */
+.about {
+    padding: 100px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+/* টাইটেলের নিচে একটি সুন্দর আন্ডারলাইন */
+.underline {
+    width: 60px;
+    height: 4px;
+    background: var(--text-light); 
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 17px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* ====================
+   Skill Tags Styling
+==================== */
+.about-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.skill-tag {
+    padding: 10px 20px;
+    background: rgba(15, 23, 42, 0.05); /* হালকা ব্যাকগ্রাউন্ড */
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    border-radius: 50px; /* সুন্দর গোলাকার শেপ */
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-dark);
+    transition: var(--smooth-transition);
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: var(--primary-dark);
+    color: #ffffff;
+    transform: translateY(-3px); /* মাউস নিলে হালকা ওপরে উঠবে */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ====================
+   Section Titles
+==================== */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background: var(--text-light); 
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* ====================
+   Contact Section Styling
+==================== */
+.contact {
+    padding: 80px 20px;
+}
+
+.contact-content {
+    display: flex;
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* চমৎকার একটি শ্যাডো */
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.info-item p {
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: inherit;
+    background: #f8fafc;
+    color: var(--text-dark);
+    transition: var(--smooth-transition);
+}
+
+/* ইনপুট বক্সে ক্লিক করলে বর্ডার ডার্ক হবে */
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-dark);
+    background: #ffffff;
+}
+
+/* ====================
+   Footer Styling
+==================== */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--primary-dark);
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+/* ====================
+   Premium Mobile Responsive Design
+==================== */
+@media (max-width: 850px) {
+    /* ন্যাভিগেশন বার সুন্দর করে সাজানো */
+    .navbar {
+        padding: 15px 0;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .logo {
+        font-size: 22px;
+    }
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        font-size: 14px; /* মোবাইলে মেন্যুর ফন্ট একটু ছোট করা হলো */
+    }
+
+    /* হিরো সেকশন: ছবি ওপরে, লেখা নিচে */
+    .hero {
+        flex-direction: column-reverse; 
+        padding: 40px 20px;
+        gap: 40px;
+        min-height: auto;
+    }
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* মোবাইলের জন্য লেখার সাইজ পারফেক্ট করা */
+    .greeting {
+        font-size: 14px;
+    }
+    .name {
+        font-size: 38px; /* লেখা যেন ভেঙে না যায় */
+        line-height: 1.2;
+    }
+    .title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .description {
+        font-size: 16px;
+        padding: 0 10px; /* লেখার দুই পাশে হালকা জায়গা */
+        margin-bottom: 30px;
+    }
+
+    /* প্রফেশনাল মোবাইল বাটন (ফুল উইডথ) */
+    .hero-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* বাটনগুলো ওপর-নিচে থাকবে */
+        gap: 15px;
+        align-items: center;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px; /* বাটনগুলো দেখতে স্মার্ট লাগবে */
+        text-align: center;
+        padding: 14px 20px;
+    }
+
+    /* ছবি সুন্দরভাবে ছোট করে মাঝখানে বসানো */
+    .hero-image img {
+        width: 240px;
+        height: 240px;
+        border-width: 6px;
+    }
+    /* কন্টাক্ট সেকশন রেসপন্সিভ */
+    .contact-content {
+        flex-direction: column;
+        padding: 25px;
+        gap: 30px;
+    }
+}
